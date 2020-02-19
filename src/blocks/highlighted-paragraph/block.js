@@ -9,7 +9,7 @@ import './editor.scss';
   var __ = wp.i18n.__;
   var el = element.createElement;
   var registerBlockType = wp.blocks.registerBlockType;
-  var RichText = wp.editor.RichText
+  var RichText = wp.editor.RichText;
 
   registerBlockType( 'alps-gutenberg-blocks/highlighted-paragraph', {
     title: __('ALPS Highlighted Paragraph'),
@@ -37,7 +37,6 @@ import './editor.scss';
             placeholder: 'Content goes here...',
             keepPlaceholderOnFocus: true,
             value: attributes.content,
-            isSelected: false,
             onChange: function( newContent ) {
               props.setAttributes( { content: newContent } );
             }
